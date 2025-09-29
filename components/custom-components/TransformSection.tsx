@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { UserIcon, RocketIcon, DeviceMobileIcon } from "@phosphor-icons/react";
+import BtnCta from "./BtnCta";
 
 interface CardData {
   id: number;
@@ -22,7 +23,7 @@ const cardsData: CardData[] = [
     image: "/images/card-1.jpg",
     icon: <UserIcon size={24} />,
     expandedDescription:
-      "Conecte-se com pessoas do seu círculo social que estão interessadas em economizar na conta de luz. Quanto mais pessoas você indicar, maior será sua renda extra.",
+      "Compartilhe com alguém que queira economizar na conta de luz.",
   },
   {
     id: 2,
@@ -48,22 +49,24 @@ const TransformSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="py-20 ">
-      <div className="max-w-6xl mx-auto px-4">
+    <div>
+      <div className="max-w-6xl mx-auto">
         {/* Título e descrição */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[57px] mb-[57px]">
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary font-glory leading-tight mb-6">
+            <h2 className="text-24px font-work-sans font-bold text-primary  leading-tight">
               Prepare-se para transformar sua vida e a de milhares de pessoas
             </h2>
           </div>
-          <div>
-            <p className="text-lg text-gray-600 font-work-sans leading-relaxed mb-6">
-              Essa é a sua chance de ganhar uma renda extra só de indicar algo
-              que todo mundo precisa: energia elétrica. E você ainda vai estar
-              ajudando o meio ambiente!
+          <div className="hidden md:flex flex-col text-primary gap-[12px] mt-6">
+            <p className="text-14px leading-relaxed">
+              Essa é a sua chance de{" "}
+              <span className="font-bold">ganhar uma renda extra</span> só de
+              indicar algo que todo mundo precisa:{" "}
+              <span className="font-bold">energia elétrica.</span> E você ainda
+              vai estar ajudando o meio ambiente!
             </p>
-            <p className="text-lg text-gray-600 font-work-sans leading-relaxed">
+            <p className="text-14px leading-relaxed">
               E exatamente isso que você faz como Consultor Lex. Você constrói
               relacionamentos que viram negócios, fortalece uma comunidade que
               cresce junto, compartilha experiências e conquista liberdade no
@@ -73,21 +76,18 @@ const TransformSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex justify-center gap-6">
+        <div className="flex justify-between gap-6 overflow-x-auto ">
           {cardsData.map((card) => (
             <div
               key={card.id}
               className={cn(
                 "relative overflow-hidden rounded-xl transition-all duration-300 ease-in-out",
-                "flex flex-col justify-end items-center gap-6 flex-shrink-0",
-                "p-8", // 32px padding
+                "flex flex-col justify-end items-center gap-24px flex-shrink-0",
+                "px-[24px] py-[32px] rounded-[12px]",
                 hoveredCard === card.id
-                  ? "w-[390px] h-[190px]"
-                  : "w-[247px] h-[190px]"
+                  ? "w-[247px] h-[250px] md:w-[390px] md:h-[190px]"
+                  : "w-[247px] h-[250px] md:h-[190px]"
               )}
-              style={{
-                borderRadius: "12px",
-              }}
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -103,29 +103,24 @@ const TransformSection = () => {
               </div>
 
               {/* Conteúdo do card */}
-              <div className="relative z-10 flex flex-col justify-end items-center gap-6 w-full">
+              <div
+                className={`relative z-10 flex flex-col justify-end items-start gap-2 w-full`}
+              >
                 {/* Ícone */}
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white">
                   {card.icon}
                 </div>
 
                 {/* Título */}
-                <h3 className="text-white font-bold text-lg text-center font-glory">
+                <h3 className="text-secondary text-[18px] font-bold  text-left ">
                   {card.title}
                 </h3>
-
-                {/* Descrição - sempre visível */}
-                {hoveredCard === card.id && (
-                  <p className="text-white/90 text-sm text-center font-work-sans">
-                    {card.description}
-                  </p>
-                )}
 
                 {/* Descrição expandida - só no hover */}
                 {hoveredCard === card.id && (
                   <div className="overflow-hidden transition-all duration-300 ease-in-out">
-                    <p className="text-white/80 text-sm font-work-sans leading-relaxed text-center">
-                      {card.expandedDescription}
+                    <p className="text-[16px] text-secondary">
+                      {card.description}
                     </p>
                   </div>
                 )}
@@ -134,11 +129,25 @@ const TransformSection = () => {
           ))}
         </div>
 
+        <div className="md:hidden flex flex-col text-primary gap-[12px] mt-6">
+          <p className="text-14px leading-relaxed">
+            Essa é a sua chance de{" "}
+            <span className="font-bold">ganhar uma renda extra</span> só de
+            indicar algo que todo mundo precisa:{" "}
+            <span className="font-bold">energia elétrica.</span> E você ainda
+            vai estar ajudando o meio ambiente!
+          </p>
+          <p className="text-14px leading-relaxed">
+            E exatamente isso que você faz como Consultor Lex. Você constrói
+            relacionamentos que viram negócios, fortalece uma comunidade que
+            cresce junto, compartilha experiências e conquista liberdade no seu
+            dia a dia.
+          </p>
+        </div>
+
         {/* Botão CTA */}
         <div className="text-center mt-12">
-          <button className="bg-gradient-primary text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-            Quero ser consultor →
-          </button>
+          <BtnCta onClick={() => {}} />
         </div>
       </div>
     </div>

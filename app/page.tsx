@@ -2,6 +2,10 @@ import Section from "@/components/custom-components/section";
 import Footer from "@/components/custom-components/Footer";
 import Hero from "@/components/custom-components/Hero";
 import TransformSection from "@/components/custom-components/TransformSection";
+import BenefitsSection from "@/components/custom-components/BenefitsSection";
+import AppToolsSection from "@/components/custom-components/AppToolsSection";
+import TestimonialsSection from "@/components/custom-components/TestimonialsSection";
+import AboutSection from "@/components/custom-components/AboutSection";
 
 export default function Home() {
   return (
@@ -13,36 +17,16 @@ export default function Home() {
         <TransformSection />
       </Section>
       <Section>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-bold">Welcome to the Alexandria</h1>
-          <p className="text-sm text-gray-500">
-            This is the Alexandria project.
-          </p>
-        </div>
+        <BenefitsSection />
       </Section>
-      <Section className="bg-image-full-dark bg-cover bg-center">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-bold">Welcome to the Alexandria</h1>
-          <p className="text-sm text-gray-500">
-            This is the Alexandria project.
-          </p>
-        </div>
+      <Section className="bg-image-full-dark bg-cover bg-center flex flex-col justify-center items-center">
+        <AppToolsSection />
       </Section>
-      <Section className="bg-[#FAFAFA]">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-bold">Welcome to the Alexandria</h1>
-          <p className="text-sm text-gray-500">
-            This is the Alexandria project.
-          </p>
-        </div>
+      <Section className="bg-[#FAFAFA] pt-[15vh] md:pt-0">
+        <TestimonialsSection />
       </Section>
       <Section>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-bold">Welcome to the Alexandria</h1>
-          <p className="text-sm text-gray-500">
-            This is the Alexandria project.
-          </p>
-        </div>
+        <AboutSection />
       </Section>
       <Footer />
     </main>

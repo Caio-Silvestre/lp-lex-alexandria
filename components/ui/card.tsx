@@ -12,10 +12,10 @@ function Card({ className, dark = false, ...props }: CardProps) {
       data-slot="card"
       className={cn(
         "flex flex-col gap-[24px] rounded-xl  p-[32px] bg-cover bg-center bg-no-repeat",
+        className,
         dark
           ? "bg-[url('/images/dark_background.png')] text-[#FFFFFF]"
-          : "bg-[url('/images/ligth-background.png')] text-[#333333]",
-        className
+          : "bg-[url('/images/ligth-background.png')] text-[#333333]"
       )}
       {...props}
     />
@@ -69,13 +69,7 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-content"
-      className={cn("px-6", className)}
-      {...props}
-    />
-  );
+  return <div data-slot="card-content" className={cn(className)} {...props} />;
 }
 
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {

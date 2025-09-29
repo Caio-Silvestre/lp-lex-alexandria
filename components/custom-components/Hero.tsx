@@ -1,5 +1,4 @@
-import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
-import ButtonPrimary from "./ButtonPrimary";
+import BtnCta from "./BtnCta";
 import Image from "next/image";
 
 const Hero = () => {
@@ -12,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Conteúdo do hero */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-[15%] md:px-[14%]">
         <div className="text-center max-w-4xl mx-auto">
           {/* Logo */}
           <div className="mb-8">
@@ -40,20 +39,14 @@ const Hero = () => {
           {/* Descrição */}
           <div className="mb-8">
             <p className="text-base md:text-lg lg:text-xl text-white/90 font-work-sans max-w-2xl mx-auto leading-relaxed">
-              Como Consultor Lex, você transforma sua rede de contatos
-              <br />
-              em oportunidades, ajuda pessoas a economizarem na
-              <br />
-              conta de luz.
+              Como Consultor Lex, você transforma sua rede de contatos em
+              oportunidades, ajuda pessoas a economizarem na conta de luz.
             </p>
           </div>
 
           {/* Botão CTA */}
           <div className="flex justify-center">
-            <ButtonPrimary>
-              Quero ser consultor
-              <ArrowRightIcon className="ml-2" size={20} />
-            </ButtonPrimary>
+            <BtnCta />
           </div>
         </div>
       </div>
