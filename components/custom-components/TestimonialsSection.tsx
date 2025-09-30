@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <CardDescription className="text-primary mt-2 ">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </CardDescription>
                 <div className="mt-4">
                   <CardTitle className="text-[12px] font-bold text-primary">
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <CardDescription className="text-primary px-6 mt-2">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </CardDescription>
                 <div className="px-6 mt-4">
                   <CardTitle className="text-[12px] font-bold text-primary">

@@ -1,14 +1,9 @@
 "use client";
-import { ArrowRightIcon } from "@phosphor-icons/react";
-import ButtonPrimary from "./ButtonPrimary";
 import { LexFormModal } from "./LexFormModal";
 
-type BtnCtaProps = {
-  disabled?: boolean;
-  onClick?: () => void;
-};
+type BtnCtaProps = Record<string, never>;
 
-const BtnCta = ({ disabled, onClick }: BtnCtaProps) => {
+const BtnCta = ({}: BtnCtaProps) => {
   return (
     <>
       {/* Desktop */}

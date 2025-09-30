@@ -147,7 +147,7 @@ const TransformSection = () => {
 
         {/* Botão CTA */}
         <div className="text-center mt-12">
-          <BtnCta onClick={() => {}} />
+          <BtnCta />
         </div>
       </div>
     </div>

@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         {/* Coluna Direita - Endereço e Links Legais */}
-        <div className="col-span-1 pt-10 flex flex-col justify-between">
+        <div className="col-span-1 flex flex-col justify-between">
           <div className="text-right">
             <h3 className="text-white text-sm font-medium mb-2">Endereço</h3>
             <p className="text-white/80 text-sm">
