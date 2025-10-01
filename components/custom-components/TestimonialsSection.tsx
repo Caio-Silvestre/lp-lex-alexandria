@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
           {testimonials.map((t, i) => (
             <Card
               key={i}
-              className="flex justify-left items-start min-w-[50vw]"
+              className="flex justify-left items-start min-w-[65vw]"
             >
               <CardContent className="px-0 flex flex-col">
                 <div>

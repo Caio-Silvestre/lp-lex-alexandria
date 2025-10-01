@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Glory, Work_Sans } from "next/font/google";
 import "./globals.css";
-
-const glory = Glory({
-  variable: "--font-glory",
-  subsets: ["latin"],
-});
-
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${glory.variable} ${workSans.variable} antialiased`}>
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

@@ -33,9 +33,7 @@ export function SuccessMessage({
           />
         </div>
         <h2 className="text-2xl font-bold text-[#1A1A1A]">{title}</h2>
-        <p className="text-sm text-[#666666] leading-relaxed max-w-md mx-auto">
-          {message}
-        </p>
+        <p className="text-sm text-[#666666]  max-w-md mx-auto">{message}</p>
       </div>
 
       {/* Steps */}
@@ -74,7 +72,7 @@ export function SuccessMessage({
               <h3 className="text-sm font-semibold text-[#1A1A1A]">
                 Contato via WhatsApp em até 24 horas
               </h3>
-              <p className="text-xs text-[#666666] leading-relaxed">
+              <p className="text-xs text-[#666666] ">
                 Nossa equipe entrará em contato em breve por WhatsApp. Caso não
                 consigamos contato, verifique sua caixa de e-mail (incluindo a
                 pasta de spam).
@@ -95,7 +93,7 @@ export function SuccessMessage({
               <h3 className="text-sm font-semibold text-[#1A1A1A]">
                 Prepare-se para começar
               </h3>
-              <p className="text-xs text-[#666666] leading-relaxed">
+              <p className="text-xs text-[#666666] ">
                 Baixe agora o App Lex e dê o primeiro passo rumo a um futuro
                 brilhante !
               </p>

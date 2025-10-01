@@ -52,10 +52,10 @@ const BenefitsSection = () => {
     <section className="w-full py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-24px font-bold text-primary font-work-sans">
+          <h2 className="mb-[0.75rem] text-24px font-bold text-primary font-work-sans">
             Os benefícios de ser Consultor Lex
           </h2>
-          <p className="text-14px text-primary/80 max-w-2xl mx-auto mt-2">
+          <p className="text-14px text-primary/80 max-w-2xl mx-auto ">
             Conheça as vantagens exclusivas de quem é um consultor Lex
           </p>
         </div>
@@ -97,11 +97,11 @@ const BenefitsSection = () => {
           {benefits.map((item) => (
             <div
               key={item.id}
-              className={`grid grid-cols-6 py-[24px] px-[12px] ${
+              className={`grid grid-cols-12 py-[24px] px-[12px] ${
                 item.id === 1 && "border-t-[1px] border-details-grey"
               } ${item.id === 5 && "border-b-[1px] border-details-grey"}`}
             >
-              <div className=" col-span-1 w-10 h-10 rounded-full bg-gray-ligth flex items-center justify-center flex-shrink-0">
+              <div className=" col-span-2 w-10 h-10 rounded-full bg-gray-ligth flex items-center justify-center flex-shrink-0">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -109,13 +109,13 @@ const BenefitsSection = () => {
                   height={24}
                 />
               </div>
-              <div className="  col-span-2">
-                <h3 className=" text-[14px] md:text-[16px] font-bold text-primary flex justify-start items-center">
+              <div className="col-span-4 flex items-center justify-start">
+                <h3 className=" text-[14px] md:text-[16px] font-bold text-primary">
                   {item.title}
                 </h3>
               </div>
-              <div className="  col-span-3 ">
-                <p className=" text-14px text-primary/80 mt-1">
+              <div className="col-span-6 ">
+                <p className="text-14px text-primary/80 mt-1">
                   {item.description}
                 </p>
               </div>

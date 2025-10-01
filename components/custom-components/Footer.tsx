@@ -24,7 +24,7 @@ export default function Footer() {
 
           {/* Missão */}
           <div className="max-w-full md:max-w-md text-center md:text-left">
-            <p className="text-white text-sm leading-relaxed">
+            <p className="text-white text-sm ">
               O futuro da energia não será construído por quem vende contratos,
               mas por <span className="font-semibold">quem forma alianças</span>{" "}
               sólidas e inteligentes.
@@ -120,7 +120,7 @@ export default function Footer() {
 
           {/* Missão */}
           <div className="max-w-full md:max-w-md text-center ">
-            <p className="text-white text-sm leading-relaxed">
+            <p className="text-white text-sm ">
               O futuro da energia não será construído por quem vende contratos,
               mas por <span className="font-semibold">quem forma alianças</span>{" "}
               sólidas e inteligentes.

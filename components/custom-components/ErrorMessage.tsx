@@ -30,7 +30,7 @@ export function ErrorMessage({
         <h4 className="text-sm font-semibold text-red-700 leading-tight">
           {title}
         </h4>
-        <p className="text-sm text-red-600 leading-relaxed">
+        <p className="text-sm text-red-600 ">
           {message ??
             "Não conseguimos enviar suas informações. Por favor, tente novamente em alguns instantes"}
         </p>

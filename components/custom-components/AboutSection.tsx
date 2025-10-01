@@ -8,14 +8,14 @@ const AboutSection = () => {
       <div className="w-full flex justify-start items-center">
         <SectionTitle>Sobre a Alexandria</SectionTitle>
       </div>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Coluna esquerda - Texto */}
           <div className="flex flex-col justify-center">
             <h2 className="text-24px font-bold text-primary mb-4">
               Energia que move confiança
             </h2>
-            <p className="text-14px text-primary leading-relaxed">
+            <p className="text-14px text-primary ">
               A Alexandria é uma empresa que nasceu para transformar a energia
               em movimento coletivo. Estamos presentes em todo o Brasil, levando
               energia limpa, acessível e com propósito para milhares de famílias
@@ -42,7 +42,7 @@ const AboutSection = () => {
                 height={400}
                 className="w-full max-h-[260px] rounded-lg object-cover"
               />
-              <p className="text-14px text-primary/80 mt-4 leading-relaxed">
+              <p className="text-14px text-primary/80 mt-4 ">
                 Com uma comunidade ativa de Consultores Lex, estamos
                 democratizando o acesso à energia sustentável, gerando impacto
                 positivo para o planeta e criando novas oportunidades de renda

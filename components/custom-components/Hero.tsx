@@ -38,7 +38,7 @@ const Hero = () => {
 
           {/* Descrição */}
           <div className="mb-8">
-            <p className="text-base md:text-lg lg:text-xl text-white/90 font-work-sans max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 font-work-sans max-w-2xl mx-auto ">
               Como Consultor Lex, você transforma sua rede de contatos em
               oportunidades, ajuda pessoas a economizarem na conta de luz.
             </p>
